@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Padaria do Rojin</title>
+    <link rel="stylesheet" href="Css/style1.css" />
+    <link rel="icon" type="image/x-icon" href="assets/favicon.png" />
+  </head>
+  <body>
+    <main id="main">
+      <div class="div1">
+        <div class="decoração"></div>
+        <div class="top">
+          <h4 class="texto1">Padaria do Rojin!</h4>
+          <h1>Número de pães</h1>
+          <h1 class="numero"></h1>
+          <p class="adicional"></p>
+          <div class="containerPao">
+            <img
+              id="pao"
+              class="imagemNaoArrastavel"
+              src="assets/pão.png"
+              alt=""
+              onmousedown="clicou()"
+              onmouseup="entrou()"
+            />
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="valorClick"></p>
+          <p class="relatos"></p>
+        </div>
+        <div class="decoração2"></div>
+      </div>
+      <div class="div2">
+        <div class="div2Top">
+          <h1>Upgrades</h1>
+        </div>
+        <div class="div2Mid">
+          <div
+            id="a1"
+            data-tooltip1="AJUDANTE! Custo: 500 Pães, 'melhora seu click em 1'"
+            onclick="b1()"
+          >
+            <img src="assets/upgrades/a1.png" alt="" />
+          </div>
+          <div
+            id="a2"
+            data-tooltip2="VENDEDOR DESESPERADO! Custo: 2500 Pães, 'melhora o Estagiário em 0,4'"
+            onclick="b2()"
+          >
+            <img src="assets/upgrades/a2.png" alt="" />
+          </div>
+          <div
+            id="a3"
+            data-tooltip3="CRIANÇA CORRENDO! custo: 10000 pães, 'melhora o click em 3'"
+            onclick="b3()"
+          >
+            <img src="assets/upgrades/a3.png" alt="" />
+          </div>
+          <div
+            id="a4"
+            data-tooltip4="FUNCIONÁRIO EMPUTECIDO! custo: 20000 pães, 'melhora o funcionário em 4'"
+            onclick="b4()"
+          >
+            <img src="assets/upgrades/a4.png" alt="" />
+          </div>
+          <div
+            id="a5"
+            data-tooltip5="SINGER ASSUSTADO! custo: 50000 pães, 'melhora o click em 8'"
+            onclick="b5()"
+          >
+            <img src="assets/upgrades/a5.png" alt="" />
+          </div>
+          <div
+            id="a6"
+            data-tooltip6="VÍTIMA! custo: 250000 pães, 'melhora o Demônio em 40'"
+            onclick="b6()"
+          >
+            <img src="assets/upgrades/a6.png" alt="" />
+          </div>
+          <!-- <div id="a7" data-tooltip7="" onclick="b7()"></div>
+          <div id="a8" data-tooltip8="" onclick="b8()"></div>
+          <div id="a9" data-tooltip9="" onclick="b9()"></div>
+          <div id="a10" data-toolti10p="" onclick="b10()"></div>
+          <div id="a11" data-tooltip11="" onclick="b11()"></div>
+          <div id="a12" data-tooltip12="" onclick="b12()"></div>
+          <div id="a13" data-tooltip13="" onclick="b13()"></div>
+          <div id="a14" data-tooltip14="" onclick="b14()"></div>
+          <div id="a15" data-tooltip15="" onclick="b15()"></div>
+          <div id="a16" data-tooltip16="" onclick="b16()"></div>
+          <div id="a17" data-tooltip17="" onclick="b17()"></div>
+          <div id="a18" data-tooltip18="" onclick="b18()"></div>
+          <div id="a19" data-tooltip19="" onclick="b19()"></div>
+          <div id="a20" data-tooltip20="" onclick="b20()"></div>
+          <div id="a21" data-tooltip21="" onclick="b21()"></div>
+          <div id="a22" data-tooltip22="" onclick="b22()"></div>
+          <div id="a23" data-tooltip23="" onclick="b23()"></div>
+          <div id="a24" data-tooltip24="" onclick="b24()"></div>
+          <div id="a25" data-tooltip25="" onclick="b25()"></div>
+          <div id="a26" data-tooltip26="" onclick="b26()"></div>
+          <div id="a27" data-tooltip27="" onclick="b27()"></div>
+          <div id="a28" data-tooltip28="" onclick="b28()"></div>
+          <div id="a29" data-tooltip29="" onclick="b29()"></div>
+          <div id="a30" data-tooltip30="" onclick="b30()"></div>
+          <div id="a31" data-tooltip31="" onclick="b31()"></div>
+          <div id="a32" data-tooltip32="" onclick="b32()"></div>
+          <div id="a33" data-tooltip33="" onclick="b33()"></div>
+          <div id="a34" data-tooltip34="" onclick="b34()"></div>
+          <div id="a35" data-tooltip35="" onclick="b35()"></div>
+          <div id="a36" data-tooltip36="" onclick="b36()"></div>
+          <div id="a37" data-tooltip37="" onclick="b37()"></div>
+          <div id="a38" data-tooltip38="" onclick="b38()"></div>
+          <div id="a39" data-tooltip39="" onclick="b39()"></div>
+          <div id="a40" data-tooltip40="" onclick="b40()"></div>
+          <div id="a41" data-tooltip41="" onclick="b41()"></div>
+          <div id="a42" data-tooltip42="" onclick="b42()"></div>
+          <div id="a43" data-tooltip43="" onclick="b43()"></div>
+          <div id="a44" data-tooltip44="" onclick="b44()"></div> -->
+        </div>
+        <div class="div2Bottom"></div>
+      </div>
+      <div class="div3">
+        <div class="informativo"><h1>Melhorias</h1></div>
+        <div class="containerMelhorias">
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/Npc.png"
+                alt=""
+                class="imagem"
+                onclick="npc()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">Estagiário <span id="numeroNpc"></span></h3>
+              <p class="informações">
+                Custo: <strong class="number"></strong> pães <br />Rende:
+                <span class="valor1"></span>
+                pães a cada 10s
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/Funcionario puto.png"
+                alt=""
+                class="imagem"
+                onclick="funcionario()"
+              />
+            </div>
+            <div class="conteudo">
+              <h4 class="nome">
+                Funcionário revoltado <span id="numeroFuncionário"></span>
+              </h4>
+              <p class="informações">
+                Custo: <strong class="number2"></strong> pães <br />Rende:
+                <span class="valor2">1</span>
+                pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/demônio.png"
+                alt=""
+                class="imagem"
+                onclick="demonio()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">Demônio <span id="numeroDemonio"></span></h3>
+              <p class="informações">
+                Custo: <strong class="number3"></strong> pães <br />Rende:
+                <span class="valor3">10</span>
+                pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/singer.png"
+                alt=""
+                class="imagem"
+                onclick="protagonista()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">
+                Protagonista <span id="numeroProtagonista"></span>
+              </h3>
+              <p class="informações">
+                Custo: <strong class="number4"></strong> pães <br />Rende: 120
+                pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/rojin.png"
+                alt=""
+                class="imagem"
+                onclick="padeiro()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">Padeiro <span id="numeroPadeiro"></span></h3>
+              <p class="informações">
+                Custo: <strong class="number5"></strong> pães <br />Rende: 1500
+                pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/calvo.png"
+                alt=""
+                class="imagem"
+                onclick="calvo()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">Calvo <span id="numeroCalvo"></span></h3>
+              <p class="informações">
+                Custo: <strong class="number6"></strong> pães <br />Rende: 25000
+                pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img">
+              <img
+                src="assets/Atributos/Apocalipsun.png"
+                alt=""
+                class="imagem"
+                onclick="apocalipsun()"
+              />
+            </div>
+            <div class="conteudo">
+              <h3 class="nome">
+                Apocalipsun <span id="numeroApocalipsun"></span>
+              </h3>
+              <p class="informações">
+                Custo: <strong class="number7"></strong> pães <br />Rende:
+                400000 pães por segundo
+              </p>
+            </div>
+          </div>
+          <div class="atributo">
+            <div class="img"></div>
+            <div class="conteudo"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="treino2.js"></script>
+  </body>
+</html>

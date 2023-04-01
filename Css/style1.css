@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+body {
+  background-color: rgb(14, 14, 14);
+  font-family: "Outfit", sans-serif;
+  font-size: 19px;
+  color: rgb(255, 225, 230);
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+#main {
+  display: flex;
+}
+
+.div1 {
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(#582626, #292b41);
+  position: relative;
+}
+
+.decoração {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 10%;
+  background-color: white;
+  border-radius: 0vh 0vh 100vh 0vh;
+}
+
+.decoração2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  opacity: 10%;
+  background-color: white;
+  border-radius: 100vh 0vh 0vh 0vh;
+  bottom: 0px;
+  right: 0px;
+}
+
+.top {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.bottom {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 5vw;
+  opacity: 70%;
+}
+
+.relatos {
+  text-align: center;
+}
+
+.texto1 {
+  margin-top: 6vh;
+}
+
+.numero {
+  text-align: left;
+  margin-top: -20px;
+}
+
+.containerPao {
+  display: inline-block;
+  height: 0px;
+}
+.containerPao #pao {
+  width: 400px;
+  margin-top: 100px;
+  transition: 50ms;
+  cursor: pointer;
+}
+
+.adicional {
+  position: relative;
+  bottom: 30px;
+  text-align: center;
+}
+
+.div2 {
+  width: 37%;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  /* upgrades começam*/
+  /* a1 começa */
+  /* a1 acaba */
+  /* a2 começa */
+  /* a2 acaba */
+  /* a3 começa */
+  /* a3 termina */
+  /* a5 começa */
+  /* upgrades terminam */
+}
+.div2 .div2Top {
+  width: 100%;
+  height: 8%;
+  background-color: rgb(14, 14, 14);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: solid 3px;
+}
+.div2 .div2Mid {
+  height: 15%;
+  display: flex;
+  gap: 30px;
+  row-gap: 70px;
+  padding: 30px;
+  flex-wrap: wrap;
+  background: linear-gradient(#634949, transparent);
+}
+.div2 .div2Mid div {
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  padding: 3px;
+  border-radius: 10px;
+  position: relative;
+  transition: 1.5s;
+}
+.div2 .div2Mid div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+.div2 #a1 {
+  background-color: lightgreen;
+  display: none;
+}
+.div2 #a1::before, .div2 #a1::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a1::before {
+  content: attr(data-tooltip1);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a1:hover::before {
+  --scale: 1;
+}
+.div2 #a2 {
+  background-color: lightblue;
+  display: none;
+}
+.div2 #a2::before, .div2 #a2::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a2::before {
+  content: attr(data-tooltip2);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a2:hover::before {
+  --scale: 1;
+}
+.div2 #a3 {
+  background-color: lightcoral;
+  display: none;
+}
+.div2 #a3::before, .div2 #a3::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a3::before {
+  content: attr(data-tooltip3);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a3:hover::before {
+  --scale: 1;
+}
+.div2 #a4 {
+  background-color: lightyellow;
+  display: none;
+}
+.div2 #a4::before, .div2 #a4::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a4::before {
+  content: attr(data-tooltip4);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a4:hover::before {
+  --scale: 1;
+}
+.div2 #a5 {
+  background-color: lightseagreen;
+  display: none;
+}
+.div2 #a5::before, .div2 #a5::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a5::before {
+  content: attr(data-tooltip5);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a5:hover::before {
+  --scale: 1;
+}
+.div2 #a6 {
+  background-color: rgb(255, 78, 78);
+  display: none;
+}
+.div2 #a6::before, .div2 #a6::after {
+  --scale: 0;
+  position: absolute;
+  transform: translateX(-120%) translateY(20%) scale(var(--scale));
+  transition: 100ms transform;
+  transform-origin: right center;
+}
+.div2 #a6::before {
+  content: attr(data-tooltip6);
+  padding: 15px;
+  width: 240px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 233, 196);
+  opacity: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.div2 #a6:hover::before {
+  --scale: 1;
+}
+.div2 .div2Bottom {
+  height: 77%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.div3 {
+  width: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div3 .informativo {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div3 .containerMelhorias {
+  height: 91vh;
+  width: 97%;
+  overflow-y: auto;
+}
+.div3 .containerMelhorias .atributo {
+  width: 100%;
+  height: 12vh;
+  display: flex;
+  margin-bottom: 15px;
+}
+.div3 .containerMelhorias .atributo .img {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div3 .containerMelhorias .atributo .img .imagem {
+  width: 9vh;
+  height: 9vh;
+  border-radius: 0.5vh;
+  cursor: pointer;
+}
+.div3 .containerMelhorias .conteudo {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.div3 .containerMelhorias .nome {
+  position: relative;
+  bottom: 10px;
+}
+.div3 .containerMelhorias .informações {
+  font-size: 17px;
+  position: relative;
+  bottom: 35px;
+}
+
+#numeroNpc {
+  margin-left: 40px;
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    overflow: auto;
+  }
+  #pao {
+    width: 2vw;
+    height: auto;
+    margin-top: 50px;
+  }
+  #main {
+    flex-direction: column;
+  }
+  .div1, .div2, .div3 {
+    width: 100%;
+  }
+  .img {
+    height: 100%;
+  }
+}
+.coco {
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  top: 0px;
+  left: 0px;
+  font-size: 1.7rem;
+  transition: 0.7s;
+  opacity: 1;
+  transform: translate(0, -10px);
+  color: rgb(32, 2, 2);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.imagemNaoArrastavel {
+  user-select: none; /* Opcional, para evitar que o usuário selecione a imagem */
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}/*# sourceMappingURL=style1.css.map */
