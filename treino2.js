@@ -1,7 +1,24 @@
+// Refers to bread UI left-side 
 let numeroPaes = document.querySelector(".numero");
 let pao = document.querySelector("#pao");
-
+const textoRelato = document.querySelector(".relatos");
 let adicional = document.querySelector(".adicional");
+
+const relato = [
+  'Yutsuu Faksumi: "com certeza o melhor pão que eu já comprei!"',
+  'Singer Faksumi: "olha, sinceramente, eu fiquei em choque de tão gostoso que esse pão consegue ser!"',
+  `Aika'Nu: "quando eu descobri sobre esses pães, eu fui imediatamente comprar, e valeu super a pena!"`,
+  'Málanus Faksumi: "bom pra PORRA!"',
+  'San Majutsu-Shi: "eu me surpreendi com tal sabor, é ótimo pra comer enquanto estuda, dá um gás do caramba!"',
+  'Madger Yasáshi: "maluco!!! quando eu provei esses pães, fui bombardeado com uma chuva de sabor, sério, é a única coisa que eu quero comer pra sempre!!!"',
+  'Tsúkino Shinji: "esses pães são o conceito mais puro do que chamamos de "sabor perfeito"!"',
+  'Himaru Hayasuki: "quando eu provei esses pães, ná hora contei para o Wevy e o Tsúkino, e do mesmo jeito que eu fui para as nuvens só pelo sabor, eles tambem foram"',
+  'Hatsúi: "meeeeu, eu acho que a melhor coisa que já aconteceu em toda minha vida foi ter conhecido essa padaria!!!! QUE PARAÍSO!!"',
+  'Wevy Kanoraine: "caramba, eu não sou um cara fácil de ganhar, mas esses pães me ganharam pra CARALHO!!!"',
+  'Shiba Yakusune: "nossa, eu me surpreendi com esses sabores, ainda bem que o Málanus me contou sobre esse maravilha de padaria!"',
+  'Nakishi yato: "noassa muleque, que negócio goxxxtoooso!!"',
+];
+
 const formatter = Intl.NumberFormat("pt", { notation: "compact" });
 const formatter2 = Intl.NumberFormat("pt");
 
@@ -17,57 +34,65 @@ function checagem() {
   }
 }
 
+// Executing the current click variable description to singular and plural (ternary operator)
 const valorClick = document.querySelector(".valorClick");
-valorClick.innerHTML = `seus cliques valem atualmente ${cliques} pães`;
+cliques > 1 ? valorClick.innerHTML = `seus cliques valem atualmente ${cliques} pães` : valorClick.innerHTML = `seus cliques valem atualmente ${cliques} pão`;
 
-const textoRelato = document.querySelector(".relatos");
-const relato = [
-  'Yutsuu Faksumi: "com certeza o melhor pão que eu já comprei!"',
-  'Singer Faksumi: "olha, sinceramente, eu fiquei em choque de tão gostoso que esse pão consegue ser!"',
-  `Aika'Nu: "quando eu descobri sobre esses pães, eu fui imediatamente comprar, e valeu super a pena!"`,
-  'Málanus Faksumi: "bom pra PORRA!"',
-  'San Majutsu-Shi: "eu me surpreendi com tal sabor, é ótimo pra comer enquanto estuda, dá um gás do caramba!"',
-  'Madger Yasáshi: "maluco!!! quando eu provei esses pães, fui bombardeado com uma chuva de sabor, sério, é a única coisa que eu quero comer pra sempre!!!"',
-  'Tsúkino Shinji: "esses pães são o conceito mais puro do que chamamos de "sabor perfeito"!"',
-  'Himaru Hayasuki: "quando eu provei esses pães, ná hora contei para o Wevy e o Tsúkino, e do mesmo jeito que eu fui para as nuvens só pelo sabor, eles tambem foram"',
-  'Hatsúi: "meeeeu, eu acho que a melhor coisa que já aconteceu em toda minha vida foi ter conhecido essa padaria!!!! QUE PARAÍSO!!"',
-  'Wevy Kanoraine: "caramba, eu não sou um cara fácil de ganhar, mas esses pães me ganharam pra CARALHO!!!"',
-  'Shiba Yakusune: "nossa, eu me surpreendi com esses sabores, ainda bem que o Málanus me contou sobre esse maravilha de padaria!"',
-  'Nakishi yato: "noassa muleque, que negócio goxxxtoooso!!"',
-];
 let index = 0;
 
 function analise() {
-  if (count > 50000000) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh white)";
-    adicional.innerHTML = "o mundo todo agora degusta seus pães!";
-  } else if (count > 1500000) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh lightred)";
-    adicional.innerHTML = "varios reinos agora conhecem seus pães";
-  } else if (count > 250000) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh lightblue)";
-    adicional.innerHTML = "seus pães agora chegam ao paladar de Canáfice!";
-  } else if (count > 50000) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh orange)";
-    adicional.innerHTML =
-      "seus pães estão sendo comprados agora por todo o reino de Belgadina!";
-  } else if (count > 10000) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh white)";
-    adicional.innerHTML =
-      "Ázuma agora está infestada de pessoas comprando seus pães!";
-  } else if (count > 2500) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh purple)";
-    adicional.innerHTML = "seus pães viram notícia em todo vilarejo Uxclavasa!";
-  } else if (count > 500) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh blue)";
-    adicional.innerHTML =
-      "estão começando a falar sobre seus pães na vizinhança!";
-  } else if (count > 100) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh lightgreen)";
-    adicional.innerHTML = "as pessoas estão começando a conhecer sua padaria!";
-  } else if (count > 10) {
-    pao.style.filter = "drop-shadow(0vh 0vh 10vh red)";
-    adicional.innerHTML = "sua padaria está engatinhando!";
+
+  let currentBreadFilter = (currentColor) => {
+    return pao.style.filter = `drop-shadow(0vh 0vh 10vh ${currentColor})`;
+  }
+
+  // The "plus one" emphatizes the count variable with the click
+
+  switch (count) {
+    case 10 + 1:
+      currentBreadFilter('red');
+      adicional.innerHTML = "Sua padaria está engatinhando!";
+      break;
+
+    case 100 + 1:
+      currentBreadFilter('lightgreen');
+      adicional.innerHTML = "As pessoas estão começando a conhecer sua padaria!";
+      break;
+
+    case 500 + 1:
+      currentBreadFilter('blue');
+      adicional.innerHTML = "Estão começando a falar sobre seus pães na vizinhança!";
+      break;
+
+    case 2500 + 1:
+      currentBreadFilter('purple');
+      adicional.innerHTML = "Seus pães viram notícia em todo vilarejo Uxclavasa!";
+      break;
+
+    case 10000 + 1:
+      currentBreadFilter('white');
+      adicional.innerHTML = "Ázuma agora está infestada de pessoas comprando seus pães!";
+      break;
+
+    case 50000 + 1:
+      currentBreadFilter('orange');
+      adicional.innerHTML = "Seus pães estão sendo comprados agora por todo o reino de Belgadina!";
+      break;
+
+    case 250000 + 1:
+      currentBreadFilter('lightblue');
+      adicional.innerHTML = "Seus pães agora chegam ao paladar de Canáfice!";
+      break;
+
+    case 1500000 + 1:
+      currentBreadFilter('lightred');
+      adicional.innerHTML = "Varios reinos agora conhecem seus pães";
+      break;
+
+    case 50000000 + 1:
+      currentBreadFilter('white');
+      adicional.innerHTML = "O mundo todo agora degusta seus pães!";
+      break;
   }
 }
 
@@ -85,6 +110,7 @@ let estagiário = {
   melhoria1: 0,
   number1: 10,
 };
+
 let numeroNpc = document.getElementById("numeroNpc");
 let dom = document.querySelector(".number");
 let valor1 = document.querySelector(".valor1");
@@ -347,7 +373,7 @@ document.querySelector(".containerPao").addEventListener("click", (e) => {
   upgrades4();
   upgrades5();
 
-  valorClick.innerHTML = `seus cliques valem atualmente ${cliques} pães`;
+  // valorClick.innerHTML = `seus cliques valem atualmente ${cliques} pães`;
 
   // creating & defining the coco el
   let coco = document.createElement("div");
