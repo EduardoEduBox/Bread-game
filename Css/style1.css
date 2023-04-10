@@ -379,7 +379,7 @@ body {
   transition: 0.7s;
   opacity: 1;
   transform: translate(0, -10px);
-  color: rgb(32, 2, 2);
+  color: #FFE1E6;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
